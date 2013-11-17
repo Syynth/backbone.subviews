@@ -44,6 +44,22 @@
 			return overriddenViewMethods.remove.call( this );
 		};
 
+		// ****************** Public Utility Functions *******************
+
+		view.addSubview = function(name, view) {
+			if ( ! this.subviews ) this.subviews = {};
+
+			this.subviews[ name ] = view;
+		}
+
+		view.addSubviews = function( hash ) {
+			if ( ! this.subviews ) this.subviews = {};
+
+			for ( subview in hash ) {
+				this.subviews[ subview ] = hash[ subview ];
+			}
+		}
+
 		// ****************** Private Utility Functions ****************** 
 
 		function _prerender() {

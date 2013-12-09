@@ -50,6 +50,7 @@
 			if ( ! this.subviews ) this.subviews = {};
 
 			this.subviews[ name ] = view;
+			return this;
 		}
 
 		view.addSubviews = function( hash ) {
@@ -58,6 +59,7 @@
 			for ( subview in hash ) {
 				this.subviews[ subview ] = hash[ subview ];
 			}
+			return this;
 		}
 
 		// ****************** Private Utility Functions ****************** 

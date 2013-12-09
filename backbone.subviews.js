@@ -105,5 +105,6 @@
 			// call this._onSubviewsRendered after everything is done (hook for application defined logic)
 			if( _.isFunction( this._onSubviewsRendered ) ) this._onSubviewsRendered.call( this );
 		}
+	return view;
 	};
 } )( Backbone, _ );

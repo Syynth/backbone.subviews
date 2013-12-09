@@ -123,5 +123,6 @@
 
 			if( debugMode ) console.groupEnd(); // "Rendering view"
 		}
+	return view;
 	};
 } )( Backbone, _ );
